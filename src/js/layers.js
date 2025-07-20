@@ -9379,7 +9379,7 @@ export const Layers =
               ]},
             { text: '自然災害伝承碑',
               children: [
-                { text: '自然災害伝承碑（全て）', data: { id: "densyou", layer: LayersMvt.densyouObj, opacity: 1, summary: stdSumm } },
+                { text: '自然災害伝承碑（全て）', data: { id: "densyou", layer: LayersMvt.densyouObj, opacity: 1, summary: stdSumm, minZoom: 10 } },
                 { text: '自然災害伝承碑（洪水）', data: { id: "densyouflood", layer: LayersMvt.densyouFloodObj, opacity: 1, summary: stdSumm } },
                 { text: '自然災害伝承碑（土砂災害）', data: { id: "densyousediment", layer: LayersMvt.densyouSedimentObj, opacity: 1, summary: stdSumm } },
                 { text: '自然災害伝承碑（高潮）', data: { id: "densyouhightide", layer: LayersMvt.densyouHightideObj, opacity: 1, summary: stdSumm } },
@@ -9452,7 +9452,7 @@ export const Layers =
             { text: '明治期の低湿地', data: { id: 'sitti', layer: sittiObj, opacity: 1, summary: stdSumm } },
             { text: '自然災害伝承碑',
               children: [
-                { text: '自然災害伝承碑（全て）', data: { id: "densyou", layer: LayersMvt.densyouObj, opacity: 1, summary: stdSumm } },
+                { text: '自然災害伝承碑（全て）', data: { id: "densyou", layer: LayersMvt.densyouObj, opacity: 1, summary: stdSumm, minZoom: 10 } },
                 { text: '自然災害伝承碑（洪水）', data: { id: "densyouflood", layer: LayersMvt.densyouFloodObj, opacity: 1, summary: stdSumm } },
                 { text: '自然災害伝承碑（土砂災害）', data: { id: "densyousediment", layer: LayersMvt.densyouSedimentObj, opacity: 1, summary: stdSumm } },
                 { text: '自然災害伝承碑（高潮）', data: { id: "densyouhightide", layer: LayersMvt.densyouHightideObj, opacity: 1, summary: stdSumm } },
@@ -9465,7 +9465,7 @@ export const Layers =
           ]},
         { text: '土地の記憶（文化）',
           children: [
-            { text: '全国旧石器時代遺跡', data: { id: "kyuusekki", layer: LayersMvt.kyuusekki0Obj, opacity: 1, summary: LayersMvt.kyuusekkiSumm } },
+            { text: '全国旧石器時代遺跡', data: { id: "kyuusekki", layer: LayersMvt.kyuusekki0Obj, opacity: 1, summary: LayersMvt.kyuusekkiSumm, minZoom: 8 } },
             { text: '各都道府県埋蔵文化財包蔵地',
               children: [
                 { text: '北海道埋蔵文化財包蔵地', data: { id: "hokkaidoumaibun", layer: LayersMvt.hokkaidoumaibunObj, opacity: 1, summary: LayersMvt.hokkaidoumaibunSumm } },
@@ -9519,7 +9519,7 @@ export const Layers =
           children: [
             { text: '日本遺産', data: { id: "nihonisan", layer: LayersMvt.nihonisanObj, opacity: 1, summary: LayersMvt.nihonisanSumm } },
             { text: '国指定文化財等データベース', data: { id: "bunkazaidb", layer: LayersMvt.bunkazaidbObj, opacity: 1, summary: LayersMvt.bunkazaidbSumm } },
-            { text: '全国旧石器時代遺跡', data: { id: "kyuusekki", layer: LayersMvt.kyuusekki0Obj, opacity: 1, summary: LayersMvt.kyuusekkiSumm } },
+            { text: '全国旧石器時代遺跡', data: { id: "kyuusekki", layer: LayersMvt.kyuusekki0Obj, opacity: 1, summary: LayersMvt.kyuusekkiSumm, minZoom: 8 } },
             { text: '北海道埋蔵文化財包蔵地', data: { id: "hokkaidoumaibun", layer: LayersMvt.hokkaidoumaibunObj, opacity: 1, summary: LayersMvt.hokkaidoumaibunSumm } },
             { text: '東京都文化財', data: { id: "tokyobunkazai", layer: LayersMvt.tokyobunkazaiObj, opacity: 1, summary: LayersMvt.tokyobunkazaiSumm } },
             { text: '富山県埋蔵文化財', data: { id: "toyamamaibun", layer: LayersMvt.toyamamaibunObj, opacity: 1, summary: LayersMvt.toyamamaibunSumm } },

@@ -5470,6 +5470,7 @@ function Densyou(url){
 export const densyouObj = {};
 for (let i of mapsStr) {
   densyouObj[i] = new VectorTileLayer(new Densyou("https://cyberjapandata.gsi.go.jp/xyz/disaster_lore_all/{z}/{x}/{y}.geojson"))
+  densyouObj[i].setMinZoom(10)
 }
 export const densyouFloodObj = {};
 for (let i of mapsStr) {
@@ -6405,7 +6406,7 @@ function kyuusekkiFunction() {
     const imageStyle = new Style({
       image: new Icon({
         src: require('@/assets/icon/whitecircle.png'),
-        color: 'green'
+        color: '#228B22'
       })
     })
     const textStyle = new Style({
@@ -6488,7 +6489,8 @@ for (let i of mapsStr) {
       // kyuusekkiWebGlObj[i],
       // kyuusekkiGeojsonObj[i],
       kyusekkiXyzObj[i],
-    ]
+    ],
+    minZoom: 8
   })
   kyuusekki0Obj[i].values_['pointer'] = true
 }

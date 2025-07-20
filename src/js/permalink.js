@@ -98,6 +98,28 @@ export function permalinkEventSet (response) {
     },
     mapName: 'map04'
   });
+  store.commit('base/unshiftLayerList', {
+    value: {
+      id: "kyuusekki",
+      title: '全国旧石器時代遺跡',
+      layer: Layers.Layers[4].children[0].children[0].data.layer,
+      opacity: 1,
+      summary: Layers.Layers[4].children[0].children[0].data.summary,
+      component: ''
+    },
+    mapName: 'map01'
+  });
+  store.commit('base/unshiftLayerList', {
+    value: {
+      id: "densyou",
+      title: '自然災害伝承碑（全て）',
+      layer: Layers.Layers[3].children[2].children[6].children[0].data.layer,
+      opacity: 1,
+      summary: Layers.Layers[3].children[2].children[6].children[0].data.summary,
+      component: ''
+    },
+    mapName: 'map01'
+  });
   if (window.location.hash !== '') {
     // const hash = decodeURIComponent(window.location.hash.replace('#', ''));
     // console.log(response)
