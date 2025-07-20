@@ -14,9 +14,9 @@ export function permalinkEventSet (response) {
     value: {
       id: 2,
       title: '淡色地図',
-      layer: Layers.Layers[1].children[1].data.layer,
+      layer: Layers.Layers[5].children[0].children[1].data.layer,
       opacity: 1,
-      summary: Layers.Layers[1].children[1].data.summary,
+      summary: Layers.Layers[5].children[0].children[1].data.summary,
       component: ''
     },
     mapName: 'map01'
@@ -36,9 +36,9 @@ export function permalinkEventSet (response) {
     value: {
       id: 2,
       title: '淡色地図',
-      layer: Layers.Layers[1].children[1].data.layer,
+      layer: Layers.Layers[5].children[0].children[1].data.layer,
       opacity: 1,
-      summary: Layers.Layers[1].children[1].data.summary,
+      summary: Layers.Layers[5].children[0].children[1].data.summary,
       component: ''
     },
     mapName: 'map02'
@@ -58,9 +58,9 @@ export function permalinkEventSet (response) {
     value: {
       id: 2,
       title: '淡色地図',
-      layer: Layers.Layers[1].children[1].data.layer,
+      layer: Layers.Layers[5].children[0].children[1].data.layer,
       opacity: 1,
-      summary: Layers.Layers[1].children[1].data.summary,
+      summary: Layers.Layers[5].children[0].children[1].data.summary,
       component: ''
     },
     mapName: 'map03'
@@ -80,9 +80,9 @@ export function permalinkEventSet (response) {
     value: {
       id: 2,
       title: '淡色地図',
-      layer: Layers.Layers[1].children[1].data.layer,
+      layer: Layers.Layers[5].children[0].children[1].data.layer,
       opacity: 1,
-      summary: Layers.Layers[1].children[1].data.summary,
+      summary: Layers.Layers[5].children[0].children[1].data.summary,
       component: ''
     },
     mapName: 'map04'
