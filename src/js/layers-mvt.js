@@ -1772,31 +1772,28 @@ export const mesh1kmObjSumm = "<a href='https://www.e-stat.go.jp/gis/statmap-sea
 // -----------------------------------------------------------------------------------
 function mesh1kColorFunction(mapName) {
   return function (feature, resolution) {
-    const jinkoMax = Number(store.state.info.jinko[mapName])
     const paintCheck = store.state.info.paintCheck1k[mapName]
-    const mesh1kColor = d3.scaleLinear()
-        // .domain([0,10000,20000,30000,33000])
-        .domain([
-            0,
-          jinkoMax/3.5,
-          jinkoMax/1.75,
-          jinkoMax*30/35,
-          jinkoMax])
-        // .domain([0,30000])
-        .range(["white", "red","#880000",'maroon','black']);
+    const jinkoMax = Number(store.state.info.jinko[mapName])
     const zoom = getZoom(resolution);
     const prop = feature.getProperties();
     const styles = [];
-    const rgb = d3.rgb(mesh1kColor(prop.jinko))
-    let rgba = "rgba(" + rgb.r + "," + rgb.g + "," + rgb.b + ",0.7)"
-    if (!paintCheck) rgba = 'rgba(0,0,0,0)'
+    let rgba
+    if (!paintCheck) {
+      rgba = 'rgba(0,0,0,0)'
+    } else if (prop.jinko >= 1 && prop.jinko <= jinkoMax) {
+      rgba = 'rgba(144, 238, 144, 0.7)' // 薄い緑
+    } else if (prop.jinko > jinkoMax) {
+      rgba = 'rgba(211, 211, 211, 0.7)' // 薄い灰色
+    } else {
+      rgba = 'rgba(0,0,0,0)' // 人口0の場合は透明
+    }
     const polygonStyle = new Style({
       fill: new Fill({
         color: rgba
         // color: 'rgba(0,0,0,0)'
       }),
       stroke: new Stroke({
-        color: zoom >= 12 ? 'red' : 'rgba(0,0,0,0)',
+        color: 'rgba(0,0,0,0)',
         width: 1
       })
     })

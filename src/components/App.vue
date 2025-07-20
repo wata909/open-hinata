@@ -57,7 +57,7 @@
                     <b-button v-if="mapName === 'map01'" class='olbtn' :size="btnSize" @click="home" style="margin-right:5px;"><i class="fa-solid fa-house"></i></b-button>
                     <b-button style="margin-right:5px;" :pressed.sync="s_toggle3d[mapName]" class='olbtn' :size="btnSize" @click="click3d(mapName)">{{ s_toggle3d[mapName] ? '2D' : '3D' }}</b-button>
                     <b-button id='split-map-btn' v-if="mapName === 'map01'" class='olbtn' :size="btnSize" @click="splitMap" style="margin-right:5px;">分割</b-button>
-                    <b-button class='olbtn-red' :size="btnSize" @click="openDialog(s_dialogs[mapName])">背景</b-button>
+                    <b-button class='olbtn-red' :size="btnSize" @click="openDialog(s_dialogs[mapName])">土地読み</b-button>
                 </div>
                 <div class="top-right-div">
                   <b-button i v-if="mapName === 'map01'" class='olbtn' :size="btnSize" @click="openDialog(s_dialogs['dialogEdit0'])"><i class="fa-solid fa-pen"></i></b-button>
@@ -1756,10 +1756,10 @@
       background-color: rgba(0,60,136,0.7);
     }
     .olbtn-red{
-      background-color: rgba(255,0,0,0.7);
+      background-color: rgba(34,139,34,0.7);
     }
     .olbtn-red:hover{
-      background-color: rgba(255,0,0,1.0);
+      background-color: rgba(34,139,34,0.9);
     }
     /*.btn-secondary:hover{*/
     /*    background-color: rgba(0,60,136,0.7);*/

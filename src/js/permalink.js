@@ -23,12 +23,34 @@ export function permalinkEventSet (response) {
   });
   store.commit('base/unshiftLayerList', {
     value: {
+      id: "jinko1km",
+      title: '疎空間指標',
+      layer: Layers.Layers[0].data.layer,
+      opacity: 1,
+      summary: Layers.Layers[0].data.summary,
+      component: Layers.Layers[0].data.component
+    },
+    mapName: 'map01'
+  });
+  store.commit('base/unshiftLayerList', {
+    value: {
       id: 2,
       title: '淡色地図',
       layer: Layers.Layers[1].children[1].data.layer,
       opacity: 1,
       summary: Layers.Layers[1].children[1].data.summary,
       component: ''
+    },
+    mapName: 'map02'
+  });
+  store.commit('base/unshiftLayerList', {
+    value: {
+      id: "jinko1km",
+      title: '疎空間指標',
+      layer: Layers.Layers[0].data.layer,
+      opacity: 1,
+      summary: Layers.Layers[0].data.summary,
+      component: Layers.Layers[0].data.component
     },
     mapName: 'map02'
   });
@@ -45,12 +67,34 @@ export function permalinkEventSet (response) {
   });
   store.commit('base/unshiftLayerList', {
     value: {
+      id: "jinko1km",
+      title: '疎空間指標',
+      layer: Layers.Layers[0].data.layer,
+      opacity: 1,
+      summary: Layers.Layers[0].data.summary,
+      component: Layers.Layers[0].data.component
+    },
+    mapName: 'map03'
+  });
+  store.commit('base/unshiftLayerList', {
+    value: {
       id: 2,
       title: '淡色地図',
       layer: Layers.Layers[1].children[1].data.layer,
       opacity: 1,
       summary: Layers.Layers[1].children[1].data.summary,
       component: ''
+    },
+    mapName: 'map04'
+  });
+  store.commit('base/unshiftLayerList', {
+    value: {
+      id: "jinko1km",
+      title: '疎空間指標',
+      layer: Layers.Layers[0].data.layer,
+      opacity: 1,
+      summary: Layers.Layers[0].data.summary,
+      component: Layers.Layers[0].data.component
     },
     mapName: 'map04'
   });

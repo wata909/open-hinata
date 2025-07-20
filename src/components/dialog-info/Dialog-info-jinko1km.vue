@@ -1,8 +1,8 @@
 <template>
   <div class="content-div">
     <p v-html="item.title"></p><hr>
-    <div style="text-align: center;">赤色の上限値 {{ s_jinko }}人</div>
-    <input type="range" min="100" :max="60100" :step="1000" class="jinko-range" v-model.number="s_jinko" @input="inputJinko" />
+    <div style="text-align: center;">疎空間指標の上限値 {{ s_jinko }}人</div>
+    <input type="range" min="0" :max="250" :step="10" class="jinko-range" v-model.number="s_jinko" @input="inputJinko" />
 <!--    <vue-slider-->
 <!--        v-model="s_jinko"-->
 <!--        :min="100"-->

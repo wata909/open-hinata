@@ -327,10 +327,10 @@ const moduleInfo = {
       map04: 0
     },
     jinko: {
-      map01: 35100,
-      map02: 35100,
-      map03: 35100,
-      map04: 35100
+      map01: 50,
+      map02: 50,
+      map03: 50,
+      map04: 50
     },
     jinko100m: {
       map01: 1310,
