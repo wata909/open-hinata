@@ -120,6 +120,28 @@ export function permalinkEventSet (response) {
     },
     mapName: 'map01'
   });
+  store.commit('base/unshiftLayerList', {
+    value: {
+      id: "souran_kawaba_points",
+      title: '遺跡総覧WebGIS（川場・利根沼田周辺・点）',
+      layer: Layers.Layers[4].children[0].children[9].data.layer,
+      opacity: 1,
+      summary: Layers.Layers[4].children[0].children[9].data.summary,
+      component: ''
+    },
+    mapName: 'map01'
+  });
+  store.commit('base/unshiftLayerList', {
+    value: {
+      id: "souran_kawaba_polygons",
+      title: '遺跡総覧WebGIS（川場・利根沼田周辺・面）',
+      layer: Layers.Layers[4].children[0].children[10].data.layer,
+      opacity: 1,
+      summary: Layers.Layers[4].children[0].children[10].data.summary,
+      component: ''
+    },
+    mapName: 'map01'
+  });
   if (window.location.hash !== '') {
     // const hash = decodeURIComponent(window.location.hash.replace('#', ''));
     // console.log(response)

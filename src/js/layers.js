@@ -6,7 +6,7 @@ import VectorSource from 'ol/source/Vector'
 import OSM from 'ol/source/OSM'
 import XYZ from 'ol/source/XYZ.js'
 import GeoJSON from 'ol/format/GeoJSON'
-import {Fill, Stroke, Style, Text} from 'ol/style'
+import {Circle, Fill, Stroke, Style, Text} from 'ol/style'
 import RasterSource from 'ol/source/Raster'
 import { transformExtent, fromLonLat } from 'ol/proj.js'
 import LayerGroup from 'ol/layer/Group'
@@ -9252,6 +9252,60 @@ for (let i of mapsStr) {
 }
 const yamashiroSumm = '出典：<br><a href="https://mapwarper.h-gis.jp/maps/5643" target="_blank">日本版 Map Warper</a>';
 
+// 遺跡総覧WebGIS（川場・利根沼田周辺）----------------------------------------------------------
+function SouranKawabaPoints () {
+  this.name = 'SouranKawabaPoints'
+  this.source = new VectorSource({
+    url: './data/geojson/souran_kawaba_points.geojson',
+    format: new GeoJSON()
+  });
+  this.minZoom = 12; // Zoom 12以上で表示
+  this.style = function(feature) {
+    return new Style({
+      image: new Circle({
+        radius: 5,
+        fill: new Fill({
+          color: 'rgba(89, 188, 89, 0.8)'
+        }),
+        stroke: new Stroke({
+          color: 'rgba(89, 188, 89, 1)',
+          width: 1
+        })
+      })
+    })
+  }
+}
+
+function SouranKawabaPolygons () {
+  this.name = 'SouranKawabaPolygons'
+  this.source = new VectorSource({
+    url: './data/geojson/souran_kawaba_polygons.geojson',
+    format: new GeoJSON()
+  });
+  this.minZoom = 10; // Zoom 10以上で表示
+  this.style = function(feature) {
+    return new Style({
+      fill: new Fill({
+        color: 'rgba(89, 188, 89, 0.3)'
+      }),
+      stroke: new Stroke({
+        color: 'rgba(89, 188, 89, 0.8)',
+        width: 2
+      })
+    })
+  }
+}
+
+export const souranKawabaPointsObj = {}
+export const souranKawabaPolygonsObj = {}
+
+for (let i of mapsStr) {
+  souranKawabaPointsObj[i] = new VectorLayer(new SouranKawabaPoints())
+  souranKawabaPolygonsObj[i] = new VectorLayer(new SouranKawabaPolygons())
+}
+
+const souranKawabaSumm = '遺跡総覧WebGIS（川場・利根沼田周辺）<br>文化庁提供の遺跡情報データ';
+
 
 // ここにレイヤーを全部書く。クリックするとストアのlayerListに追加されていく-------------------------
 // ここにレイヤーを全部書く。クリックするとストアのlayerListに追加されていく-------------------------
@@ -9526,6 +9580,8 @@ export const Layers =
             { text: '岡山県埋蔵文化財', data: { id: "okayamamai", layer: LayersMvt.okayamamaiiObj, opacity: 1, summary: LayersMvt.okayamamaiSumm } },
             { text: '熊本県遺跡', data: { id: "kumamotomai", layer: LayersMvt.kumamotomaiObj, opacity: 1, summary: LayersMvt.kumamotomaiSumm } },
             { text: '土木学会選奨土木遺産', data: { id: "dobokuisan", layer: LayersMvt.dobokuisanObj, opacity: 1, summary: LayersMvt.dobokuisanSumm } },
+            { text: '遺跡総覧WebGIS（川場・利根沼田周辺・点）', data: { id: "souran_kawaba_points", layer: souranKawabaPointsObj, opacity: 1, summary: souranKawabaSumm } },
+            { text: '遺跡総覧WebGIS（川場・利根沼田周辺・面）', data: { id: "souran_kawaba_polygons", layer: souranKawabaPolygonsObj, opacity: 1, summary: souranKawabaSumm } },
           ]},
         { text: '神社・寺院',
           children: [
