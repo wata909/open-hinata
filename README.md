@@ -1,12 +1,9 @@
-# open-hinata
-ol5+vueで作成したオープン版の「ひなたGIS」です。「ひなたGIS」の作者が作っています
-# Demo
-[・初期時](https://kenzkenz.xsrv.jp/open-hinata/)
-[・２画面](https://kenzkenz.xsrv.jp/open-hinata/#6/139.02448/37.77939%3FS%3D2%26L%3D%5B%5B%7B%22id%22%3A1%2C%22o%22%3A1%2C%22c%22%3A%22%22%7D%5D%2C%5B%7B%22id%22%3A2%2C%22o%22%3A1%2C%22c%22%3A%22%22%7D%5D%2C%5B%7B%22id%22%3A4%2C%22o%22%3A1%2C%22c%22%3A%22%22%7D%5D%2C%5B%5D%5D)
-[・４画面](https://kenzkenz.xsrv.jp/open-hinata/?fbclid=IwAR0io3P1uDwh0w_qLnJ5ad5RkQaXfsecJ5l0Ks7pYeaejuDyMexiFFqxeD4#5/139.40309/38.13596%3FS%3D3%26L%3D%5B%5B%7B%22id%22%3A2%2C%22ck%22%3Atrue%2C%22o%22%3A1%2C%22c%22%3A%22%22%7D%5D%2C%5B%7B%22id%22%3A%22zenkokusaisin%22%2C%22ck%22%3Atrue%2C%22o%22%3A1%7D%2C%7B%22id%22%3A2%2C%22ck%22%3Atrue%2C%22o%22%3A1%2C%22c%22%3A%22%22%7D%5D%2C%5B%7B%22id%22%3A%22kotizu00%22%2C%22ck%22%3Atrue%2C%22o%22%3A1%7D%2C%7B%22id%22%3A2%2C%22ck%22%3Atrue%2C%22o%22%3A1%2C%22c%22%3A%22%22%7D%5D%2C%5B%7B%22id%22%3A4%2C%22m%22%3Atrue%2C%22ck%22%3Atrue%2C%22o%22%3A1%7D%2C%7B%22id%22%3A2%2C%22ck%22%3Atrue%2C%22o%22%3A1%2C%22c%22%3A%22%22%7D%5D%5D)
-[・５万分の１旧版地形図](https://kenzkenz.xsrv.jp/open-hinata/#9/131.11275/32.72855%3FS%3D1%26L%3D%5B%5B%7B%22id%22%3A%22mw5%22%2C%22o%22%3A1%7D%2C%7B%22id%22%3A1%2C%22o%22%3A1%2C%22c%22%3A%22%22%7D%5D%2C%5B%7B%22id%22%3A2%2C%22o%22%3A1%2C%22c%22%3A%22%22%7D%5D%2C%5B%7B%22id%22%3A4%2C%22o%22%3A1%2C%22c%22%3A%22%22%7D%5D%2C%5B%5D%5D)
-[・海面上昇シミュレーション](https://kenzkenz.xsrv.jp/open-hinata/#12/131.46822/32.09212%3FS%3D1%26L%3D%5B%5B%7B%22id%22%3A%22flood10m%22%2C%22o%22%3A1%2C%22c%22%3A%7B%22name%22%3A%22flood10m%22%2C%22values%22%3A%5B5.5%2C100%5D%7D%7D%2C%7B%22id%22%3A1%2C%22o%22%3A1%2C%22c%22%3A%22%22%7D%5D%2C%5B%7B%22id%22%3A2%2C%22o%22%3A1%2C%22c%22%3A%22%22%7D%5D%2C%5B%7B%22id%22%3A4%2C%22o%22%3A1%2C%22c%22%3A%22%22%7D%5D%2C%5B%5D%5D)
+# open-hinata（改）
+ol5+vueで作成したオープン版の「ひなたGIS」である[open-hinata](https://kenzkenz.xsrv.jp/open-hinata/)を、wata909が改造したものです。
 
+# Demo
+[メイン画面](https://wata909.github.io/open-hinata/dist/#sgCAXTM)
+[・５万分の１旧版地形図](https://wata909.github.io/open-hinata/dist/#sWkeJLs)
 
 # Dependencies
 地図ライブラリはol5を使用。フレームワークにvue+vuexを使用しています。vue CLI 3で開発、ビルドしています。
@@ -25,7 +22,8 @@ npm run serve
 npm run build
 ```
 # Authors
-ken ochiai
+original ken ochiai  
+改造 wata909
 
 # 説明
 ## 変数
