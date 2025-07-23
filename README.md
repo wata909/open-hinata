@@ -2,8 +2,8 @@
 ol5+vueで作成したオープン版の「ひなたGIS」である[open-hinata](https://kenzkenz.xsrv.jp/open-hinata/)を、wata909が改造したものです。
 
 # Demo
-[メイン画面](https://wata909.github.io/open-hinata/dist/#sgCAXTM)
-[・５万分の１旧版地形図](https://wata909.github.io/open-hinata/dist/#sWkeJLs)
+[メイン画面](https://wata909.github.io/read-the-land/dist/#sgCAXTM)
+[・５万分の１旧版地形図](https://wata909.github.io/read-the-land/dist/#sWkeJLs)
 
 # Dependencies
 地図ライブラリはol5を使用。フレームワークにvue+vuexを使用しています。vue CLI 3で開発、ビルドしています。
